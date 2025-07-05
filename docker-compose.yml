@@ -1,27 +1,30 @@
----
-version: "3.8"
+version: '3'
 services:
-  movies:
-    image: srinadhgoud/paytmmovies:latest
+  amazon:
+    image: rajjambhle007/amazononline:latest
     ports:
-      - 91:80
+      - "80:80"
     deploy:
       replicas: 3
-  train:
-    image: srinadhgoud/paytmtrain:latest
+
+  flipkart:
+    image: rajjambhle007/flipkartline:latest
     ports:
-      - 92:80
+      - "81:80"
     deploy:
       replicas: 3
-  recharge:
-    image: srinadhgoud/paytmrecharge:latest
+
+  meesho:
+    image: rajjambhle007/meeshoonline:latest
     ports:
-      - 93:80
+      - "82:80"
     deploy:
       replicas: 3
-  dth:
-    image: srinadhgoud/paytmdth:latest
+
+  shopify:
+    image: rajjambhle007/shopifyonline:latest
     ports:
-      - 94:80
+      - "83:80"
     deploy:
       replicas: 3
+
